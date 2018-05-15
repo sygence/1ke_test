@@ -1,0 +1,66 @@
+<view class="hd-container">
+  <view class='user-info'>
+  <!-- 需要使用 button 来授权登录 -->
+<button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+<view wx:else>请升级微信版本</view>
+  </view>
+</view>
+
+<view class="container">
+  <view class="contain">
+    <navigator url="/pages/form/form" hover-class="none">
+      <view class="box_1 btn-area">
+        <text>信息修改</text>
+        <image class="picture" src="/images/more.png"></image>
+      </view>
+    </navigator>
+   
+   <navigator url="/pages/user/bind" hover-class="none">
+      <view class="box_1 btn-area">
+        <text>学号认证</text>
+        <image class="picture" src="/images/more.png"></image>
+      </view>
+    </navigator>
+
+    <navigator url="#" hover-class="none">
+      <view class="box_1 btn-area">
+        <text>分享我们</text>
+        <image class="picture" src="/images/more.png"></image>
+      </view>
+    </navigator>
+
+    <view class="btn" bindtap="powerDrawer" data-statu="open">
+      <text>关于我们</text>
+      <image class="picture" src="/images/more.png"></image>
+    </view>
+    <view class="clean-btn">
+    <button bindtap='changeAccount'>退出登录</button>
+    </view>
+  </view>
+
+
+
+
+  <!--mask-->
+    <view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
+    <!--content-->
+    <!--使用animation属性指定需要执行的动画-->
+    <view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+
+      <!--drawer content-->
+      <view class="drawer_title">关于我们</view>
+      <view class="drawer_content">
+        <view class="text_head">【版权所有】</view>
+        <view class="text">小程序由Sygence、Susmote共同开发</view>
+        <view class="text_head">【当前版本】</view>
+        <view class="text">v1.0.0 2018-5-10</view>
+        <view class="text_head">【更新日志】</view>
+        <view class="text">信息完善</view>
+      </view>
+      <view class="btn_ok" bindtap="powerDrawer" data-statu="close">确定</view>
+    </view>
+
+</view>
+
+
+

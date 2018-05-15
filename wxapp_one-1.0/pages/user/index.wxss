@@ -1,0 +1,131 @@
+/**user/index.wxss**/
+.page-body-info {
+  padding-bottom: 0;
+  height: 230px;
+}
+.userinfo-avatar {
+  border-radius: 128rpx;
+  width: 128rpx;
+  height: 128rpx;
+}
+.user-info{
+    
+
+
+}
+
+.userinfo-nickname {
+  margin-top: 20rpx;
+  font-size: 38rpx;
+}
+ 
+
+.nickname{
+  font-size: 25px;
+  text-align: center;
+}
+.hd-container{
+ 
+  width: 100%;
+  height: 270rpx;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50rpx;
+  background-color: #194982;
+
+}
+.container{
+ position:absolute;
+ 
+ width: 100%;
+ height: 600rpx;
+
+}
+.contain{
+  width: 100%;
+  height: 580rpx;
+ 
+}
+
+.box_1{
+  width: 90%;
+  vertical-align: middle;
+  border-bottom: 2rpx solid  #DCDCDC;
+  padding:10px;
+  margin-top: 10px;
+}
+
+.picture{
+  width: 64rpx;
+  height: 64rpx;
+  float: right;
+
+}
+.clean-btn{
+ padding-top: 50rpx;
+
+}
+
+/* 关于我们模态框*/
+
+/*modal*/  
+.btn {  
+  width: 90%;
+  padding:10px;
+  margin-top: 10px;
+  border-bottom: 2rpx solid  #DCDCDC;
+ 
+}  
+  
+/*阴影幕布*/  
+.drawer_screen {  
+  width: 100%;  
+  height: 100%;  
+  position: fixed;  
+  top: 0;  
+  left: 0;  
+  z-index: 1000;  
+  background: #000;  
+  opacity: 0.5;  
+  overflow: hidden;  
+}  
+  
+/*content*/  
+.drawer_box {  
+  width: 650rpx;  
+  overflow: hidden;  
+  position: fixed;  
+  top: 50%;  
+  left: 0;  
+  z-index: 1001;  
+  background: #FAFAFA;  
+  margin: -150px 50rpx 0 50rpx;  
+  border-radius: 3px;  
+}  
+  
+
+.drawer_content {  
+  
+  height: 210px;  
+} 
+.drawer_title{
+text-align: center;
+
+} 
+  
+.btn_ok{  
+  padding: 10px;  
+  font: 20px "microsoft yahei";  
+  text-align: center;  
+  border-top: 1px solid #E8E8EA;  
+  color: #3CC51F;  
+}  
+.text{
+  color:#888888;
+  padding: 10rpx;
+}
+.text_head{
+  color: #353535;
+}

@@ -1,0 +1,15 @@
+<view class="wrapper">
+  <view class="loginform">
+    <form bindsubmit="formSubmit">
+      <view class="control-group">
+        <view class="control">
+          <input bindfocus="username" id="username" data-name="username" bindinput="bindInputChange"  type="number" name='username' placeholder="学号"></input>
+        </view>
+        <view class="control">
+          <input type="password" id="password" name='password' bindfocus="pwdFocus" placeholder="密码"></input>
+        </view>
+        <button class='login-btn' disabled="{{isLoading}}" loading="{{isLoading}}" bindinput="bindInputChange" type="primary" form-type="submit">登录</button>
+      </view>
+    </form>
+  </view>
+</view>

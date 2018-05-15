@@ -1,0 +1,19 @@
+<!--list/index.wxml-->
+<scroll-view scroll-x="true" style="width: 750rpx; height: 36px; background: #fff;">
+<view class="tab-title" style="width: {{titleWidth}}px">
+    <block wx:for="{{cates}}" wx:key="{{index}}">
+        <view bindtap="swiperSwitch" data-current="{{index}}" class="tab-title-item {{(swiperIndex==index)?'active':''}}">{{item.Name}}</view>
+    </block>
+</view>
+</scroll-view>
+<import src="/pages/list/item.wxml" />
+<swiper style="height: {{winHeight}}px" current="{{swiperIndex}}" bindchange="swiperChange">
+    <block wx:for="{{cates}}" wx:key="{{index}}">
+        <swiper-item>
+            <scroll-view scroll-y="true" style="height: {{winHeight}}px" bindscrolltolower="loadPullData">
+                <template is="list-item" data="{{...item.info}}" />
+            </scroll-view>
+        </swiper-item>
+    </block>
+</swiper>
+<view class="fixed-icon" bindtap="activeRefresh"><image src="../../images/icon/refresh.svg" mode="aspectFill" /></view>

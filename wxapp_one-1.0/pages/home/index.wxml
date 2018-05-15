@@ -1,0 +1,82 @@
+<!--index.wxml-->
+
+<!--轮播 -->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-dots="true">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150" />
+    </swiper-item>
+  </block>
+</swiper>
+
+
+<!--功能区 -->
+<view class="function">
+  <view class="one">
+    <navigator url="#" class="guide">
+    <image src="/images/one_1.png"  class="picture"></image>
+    <text class="text">E家论坛</text>
+    </navigator>
+    <navigator url="/pages/form/form" class="guide">
+    <image src="/images/one_2.png"  class="picture"></image>
+    <text class="text">信息录入</text>
+    </navigator>
+    <navigator url="#" class="guide">
+    <image src="/images/one_3.png"  class="picture"></image>
+    <text class="text">人脸打卡</text>
+    </navigator>
+    <navigator url="/pages/feedback/feedback" class="guide">
+    <image src="/images/one_4.png"  class="picture"></image>
+    <text class="text">投诉建议</text>
+    </navigator>
+    <navigator url="/pages/repair/repair" class="guide">
+    <image src="/images/one_5.png"  class="picture"></image>
+    <text class="text">宿舍报修</text>
+    </navigator>
+  </view>
+
+  <view class="one">
+    <navigator url="#" class="guide">
+    <image src="/images/two_1.png"  class="picture"></image>
+    <text class="text">留言板</text>
+    </navigator>
+    <navigator url="#" class="guide">
+    <image src="/images/two_2.png"  class="picture"></image>
+    <text class="text">武软官网</text>
+    </navigator>
+    <navigator url="#" class="guide">
+    <image src="/images/two_3.png"  class="picture"></image>
+    <text class="text">校园通讯</text>
+    </navigator>
+    <navigator url="#" class="guide">
+    <image src="/images/two_4.png"  class="picture"></image>
+    <text class="text">成绩查询</text>
+    </navigator>
+    <navigator url="#" class="guide">
+    <image src="/images/two_5.png"  class="picture"></image>
+    <text class="text">更多功能</text>
+    </navigator>
+  </view>
+</view>
+<!-- 咨询区-->
+
+<navigator url="/pages/search/index" class="search-group">
+    <view class="search-input">搜索</view>
+    <image class="search-icon" src="../../images/icon/search-icon.svg" mode="aspectFill" />
+</navigator>
+
+
+
+<import src="/pages/template/article-item.wxml" />
+<view class="title-mode">最新发布</view>
+<view class="article-list-container">
+    <block wx:for="{{list}}" wx:key="{{index}}">
+        <template is="article-item" data="{{...item}}" />
+    </block>
+</view>
+
+<import src="/pages/template/loading.wxml" />
+<template is="global-loading-bar" wx:if="{{loading}}" />
+
+<import src="/pages/template/loadend.wxml" />
+<template is="global-loadend" wx:if="{{loadend}}" />
