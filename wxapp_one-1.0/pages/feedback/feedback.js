@@ -25,8 +25,8 @@ Page({
       key: 'account',
       success: function(res) {
         wx.request({
-          url: 'https://ehome.susmote.com/zb_system/cmd.php?act=os_wxapi&v=v1&mode=catelist', 
-          method:'post',
+          url: 'https://ehome.susmote.com/zb_system/cmd.php?act=os_wxapi&v=v1&mode=feedback', 
+          method:'GET',
           data: {
             content: that.data.content,
             contact: that.data.contact,

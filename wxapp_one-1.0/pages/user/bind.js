@@ -82,7 +82,7 @@ Page({
         var objData = e.detail.value;
         if (objData.username && objData.password) {
           wx.request({
-            //url: '',
+            url: 'https://ehome.susmote.com/zb_system/cmd.php?act=os_wxapi&v=v1&mode=user',
             method: 'POST',
             data: {
               username: objData.username,

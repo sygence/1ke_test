@@ -1,0 +1,13 @@
+
+<image src="/../images/face.png" style="margin:20rpx 80rpx;;"></image>
+<navigator url="/pages/faceset-add/faceset-add">
+<view class="weui-btn-area">
+  <button class="weui-btn" type="primary" form-type="submit">人脸数据入库</button>
+</view>
+</navigator>
+
+<navigator url='/pages/faceset-search/faceset-search'>
+<view class="weui-btn-area">
+  <button class="weui-btn" type="primary" form-type="submit">人脸数据搜索</button>
+</view>
+</navigator>

@@ -1,0 +1,192 @@
+
+.MessageBox {
+    width: 550rpx;
+    background: #fff;
+    position: fixed;
+    bottom: 50rpx;
+    left: 80rpx;
+    border-radius: 20rpx;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    padding: 20rpx;
+    font-size: 28rpx;
+    z-index: 999;
+    color: #515151;
+    text-align: center;
+}
+.NavBar {
+    width: 750rpx;
+    height: 20px;
+    background: #47a86c;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+.PageCont {
+    padding-top: 20px;
+    position: relative;
+}
+
+
+
+.TitleBar {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 80rpx;
+    text-align: left;
+    background: #47a86c;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    line-height: 80rpx;
+    color: #fff;
+}
+
+.TitleBar .title {
+    width: 450rpx;
+    text-align: center;
+    font-size: 36rpx;
+    font-weight: bold;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.TitleBar .left_edit {
+    padding-left: 30rpx;
+    width: 120rpx;
+    font-size: 32rpx;
+}
+
+.return-btn {
+    position: fixed;
+    z-index: 999;
+    top: 15rpx;
+    left: 7pt;
+    padding: 10rpx 20rpx;
+    display: table;
+    line-height: 40rpx;
+    border-radius: 30rpx;
+    font-size: 30rpx;
+    background: rgba(0,0,0,0.2);
+    color: #fff;
+}
+
+.login_top {
+    margin: 50rpx;
+    text-align: center;
+}
+
+.login_top .icon {
+    font-size: 140rpx;
+    color: #47a86c;
+}
+
+.login_top .text {
+    font-size: 34rpx;
+    font-weight: bold;
+    color: #515151;
+}
+
+button {
+    width: 300rpx;
+    height: 80rpx;
+    margin: 40rpx auto;
+    font-size: 34rpx;
+    text-align: center;
+    line-height: 80rpx;
+    background-color: #47a86c;
+    border-radius: 10rpx;
+    color: #fff;
+}
+
+.form-list {
+    position: relative;
+    margin-bottom: 20rpx;
+    background: white;
+}
+
+.form-list:first-child {
+    margin-top: 20rpx;
+}
+
+.form-list::before,.form-list::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    transform: scaleY(0.5);
+    background-color: #e3e3e3;
+}
+
+.form-list::before {
+    top: 0;
+}
+
+.form-list::after {
+    bottom: 0;
+}
+
+.form-item {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    padding: 15rpx 40rpx;
+}
+
+.form-item::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    height: 1px;
+    width: 100%;
+    transform: scaleY(0.5);
+    background-color: #e3e3e3;
+}
+
+.form-item:first-child::before {
+    display: none;
+}
+
+.form-item-hd {
+    width: 120rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    font-size: 32rpx;
+}
+
+.form-item-bd {
+    flex: 1;
+    height: 60rpx;
+}
+
+.form-item-sd {
+    height: 60rpx;
+    width: 240rpx;
+}
+
+.form-item-bd input,.input,.form-item-bd picker {
+    font-size: 32rpx;
+    box-sizing: border-box;
+    width: 100%;
+    height: 60rpx;
+    line-height: 60rpx;
+    background-color: #fff;
+    padding: 0 15rpx;
+}
+
+.input-placeholder {
+    color: #808080;
+}
+
+.hidden {
+    display: none;
+}

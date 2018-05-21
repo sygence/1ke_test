@@ -4,10 +4,29 @@ Page({
 
   data: {
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    motto: 'Hello World',
-    userInfo: {},
-    info: {}
+    userInfo:'',
+    info: ''
   },
+  onLoad: function () {
+    var that = this
+    // 查看是否授权
+    wx.getSetting({
+      success: function (res) {
+        if (res.authSetting['scope.userInfo']) {
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称
+          wx.getUserInfo({
+            success: function (res) {
+              console(res.userInfo)
+            }
+          })
+        }
+      }
+    })
+  },
+  bindGetUserInfo: function (e) {
+    console.log(e.detail.userInfo)
+  },
+  //退出登录后的提示
   changeAccount() {
     wx.showModal({
       title: '提示',
@@ -25,32 +44,7 @@ Page({
     })
 
   },
-  onLoad: function () {
-    var that = this
-    wx.getStorage({
-      key: 'account',
-      success: function (res) {
-
-        that.setData({
-          info: res.data
-        })
-      },
-    })
-
-    // 查看是否授权
-    wx.getSetting({
-      success: function (res) {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称
-          wx.getUserInfo({
-            success: function (res) {
-              console(res.userInfo)
-            }
-          })
-        }
-      }
-    })
-  },
+  
   // 用户授权登陆获得的信息
   bindGetUserInfo: function (e) {
     console.log(e.detail.userInfo)
@@ -62,8 +56,17 @@ Page({
     var currentStatu = e.currentTarget.dataset.statu;
     this.util(currentStatu)
   },
+  onShareAppMessage: function (n) {
+    return {
+      title: "计算机学院宿舍E家小程序，欢迎您的使用！",
+      path: "/pages/home/index",
+      success: function (n) { },
+      fail: function (n) { }
+    };
+  },
+  /* 动画部分 */
   util: function (currentStatu) {
-    /* 动画部分 */
+    
     // 第1步：创建动画实例   
     var animation = wx.createAnimation({
       duration: 200,  //动画时长  

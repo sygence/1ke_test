@@ -1,0 +1,47 @@
+<view class="PageCont PageWithTitle">
+    <form bindsubmit="AddLsn">
+        <view class="form-list">
+            <view class="form-item">
+                <view class="form-item-hd">课程</view>
+                <view class="form-item-bd">
+                    <input name="title" placeholder="课程名称" type="text"></input>
+                </view>
+            </view>
+            <view class="form-item">
+                <view class="form-item-hd">老师</view>
+                <view class="form-item-bd">
+                    <input name="teacher" placeholder="教师姓名" type="text"></input>
+                </view>
+            </view>
+        </view>
+        <view class="form-list">
+            <view class="form-item">
+                <view class="form-item-hd">周数</view>
+                <view class="form-item-bd">
+                    <picker bindchange="weekPickerChange" mode="multiSelector" range="{{weekArray}}" value="{{weekIndex}}">周{{weekArray[0][weekIndex[0]]}}，第{{weekArray[1][weekIndex[1]]}}-{{weekArray[2][weekIndex[2]]}}周，{{weekArray[3][weekIndex[3]]}}</picker>
+                </view>
+            </view>
+            <view class="form-item">
+                <view class="form-item-hd">节数</view>
+                <view class="form-item-bd">
+                    <picker bindchange="jieshuPickerChange" mode="multiSelector" range="{{jieshuArray}}" value="{{jieshuIndex}}">第{{jieshuArray[0][jieshuIndex[0]]}}-{{jieshuArray[1][jieshuIndex[1]]}}节课</picker>
+                </view>
+            </view>
+        </view>
+        <view class="form-list">
+            <view class="form-item">
+                <view class="form-item-hd">教学楼</view>
+                <view class="form-item-bd">
+                    <input name="jiaoxuelou" placeholder="教学楼编号，推荐使用数字代表" type="text"></input>
+                </view>
+            </view>
+            <view class="form-item">
+                <view class="form-item-hd">教室</view>
+                <view class="form-item-bd">
+                    <input name="jiaoshi" placeholder="教室编号" type="text"></input>
+                </view>
+            </view>
+        </view>
+        <button formType="submit" style="background: {{StyleColor}};">添  加</button>
+    </form>
+</view>

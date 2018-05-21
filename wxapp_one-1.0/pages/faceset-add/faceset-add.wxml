@@ -1,0 +1,25 @@
+<!--page/API/pages/faceset-add/faceset-add.wxml-->
+
+<template is="facesetadd" />
+<template name="facesetadd">
+  <view class="scanner" bindtap="bindChooseImg">
+    <canvas class="canvas" id="scannerCanvas" canvas-id="scannerCanvas" disable-scroll="true" />
+    <view class="chooseImage">
+      <image src="/../images/plus.png" style="width:100rpx;height:100rpx;"></image>
+    </view>
+  </view>
+  <view class="weui-cell weui-cell_input">
+
+    <input class="weui-input py-input" maxlength="20" bindinput="bindClassInput" placeholder="请输入班级，例如rj1701" />
+  </view>
+  <view class="weui-cell weui-cell_input">
+    <input class="weui-input py-input" maxlength="20" bindinput="bindIdInput" placeholder="请输入你的学号" />
+  </view>
+  <view class="weui-cell weui-cell_input">
+    <input class="weui-input py-input" maxlength="20" bindinput="bindNameInput" placeholder="请输入你的姓名" />
+  </view>
+  <view class="buttons">
+    <view class="confirm" bindtap="bindConfirm">确定</view>
+  </view>
+
+</template>

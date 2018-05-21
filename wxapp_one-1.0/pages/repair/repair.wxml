@@ -1,26 +1,42 @@
 <view class="logo" style="margin-bottom:20px">
-   <image class="logo" src="/images/repair.png"></image>
-  </view>
+  <image class="logo" src="/images/repair.png"></image>
+</view>
 
-  <view class="top">宿舍报修</view>
-<view class="card">
- <view class="weui-cells__title" style="text-align: left;font-size:25rpx;">内容</view>
-        <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell">
-                <view class="weui-cell__bd">
-                    <textarea bindinput="contentImput" class="weui-textarea" placeholder="请把宿舍要报修的东西详细写下来？" style="height:150rpx;font-size:28rpx;text-align: left;" />
-                </view>
-            </view>
-        </view>
+<view class="top">宿舍报修</view>
+<view class="weui-cell weui-cell_input">
+  <view class="weui-cell__hd">
+    <view class="weui-label" style="text-align: left;font-size:25rpx;">楼栋</view>
+  </view>
+  <view class="weui-cell__bd">
+    <input class="weui-input" style="text-align: left;font-size:25rpx;" confirm-type="next" name="dormitory" type="number" placeholder="请输入楼栋" />
+  </view>
+</view>
+
+<view class="weui-cell weui-cell_input">
+  <view class="weui-cell__hd">
+    <view class="weui-label" style="text-align: left;font-size:25rpx;">寝室号</view>
+  </view>
+  <view class="weui-cell__bd">
+    <input class="weui-input" style="text-align: left;font-size:25rpx;" confirm-type="next" name="room" type="number" placeholder="请输入寝室号" />
+  </view>
 </view>
 <view class="card">
-  <view   class="weui-cells__title" style="text-align: left;font-size:25rpx;">联系方式</view>
-        <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell weui-cell_input">
-                <view class="weui-cell__bd">
-                    <input bindinput="contactImput" class="weui-input" placeholder="QQ \微信，方便我们联系到你来更好解决问题" style="font-size:28rpx;text-align: left;" />
-                </view>
-            </view>
-        </view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <textarea bindinput="contentImput" name="content" class="weui-textarea" placeholder="请把宿舍要报修的东西详细写下来" style="height:150rpx;font-size:28rpx;text-align: left;" />
+      </view>
+    </view>
+  </view>
 </view>
- <button bindtap="submit" class="weui-btn" type="primary" plain="true">提交</button>
+<view class="card">
+  <view class="weui-cells__title" style="text-align: left;font-size:25rpx;">联系方式</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__bd">
+        <input bindinput="contactImput" name="contact" class="weui-input" placeholder="QQ \微信，方便我们联系到你来更好解决问题" style="font-size:28rpx;text-align: left;" />
+      </view>
+    </view>
+  </view>
+</view>
+<button bindtap="submit" class="weui-btn" type="primary" plain="true">提交</button>

@@ -102,21 +102,7 @@ input{
   left: 290rpx;
 }
 
-.hand-password {
-  transform: translateX(95rpx) translateY(-30rpx) scale(0.7);
-}
 
-.hand-r-password {
-  transform: translateX(-90rpx) translateY(-30rpx) scale(0.7);
-}
-
-.arm-password {
-  transform: translateY(-80rpx) translateX(80rpx);
-}
-
-.arm-r-password {
-  transform: translateY(-80rpx) translateX(-72rpx) scaleX(-1);
-}
 
 .control-group {
   width: 700rpx;
@@ -124,7 +110,8 @@ input{
   margin: 0 auto;
   padding: 20rpx;
   border-top: 4rpx solid rgba(71, 45, 32,0.3);
-  color: #472d20;
+  
+
 }
 
 .control {
@@ -133,6 +120,7 @@ input{
   margin: 20rpx auto;
   padding: 15rpx;
   font-size: 40rpx;
+  
   
  
   

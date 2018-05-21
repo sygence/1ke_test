@@ -20,21 +20,23 @@
           </view>
           <radio-group name="gender">
             <label>
-              <radio value="boy" />男</label>
+              <radio value="0" />男</label>
             <label>
-              <radio value="girl" />女</label>
+              <radio value="1" />女</label>
           </radio-group>
         </view>
 
-
-        <view class="weui-cell weui-cell_input">
-          <view class="weui-cell__hd">
+        <view class="weui-cell weui-cell_select">
+          <view class="weui-cell__hd weui-cell__hd_in-select-after">
             <view class="weui-label">学院</view>
           </view>
           <view class="weui-cell__bd">
-            <input class="weui-input" type="text" name="department" placeholder="请输入学院" />
+            <picker bindchange="bindPickerChange" value="{{index}}" name="department" range="{{array}}">
+              <view class="picker weui-select weui-select_in-select-after">{{array[department]}}</view>
+            </picker>
           </view>
         </view>
+
 
 
         <view class="weui-cell weui-cell_input">
@@ -42,7 +44,7 @@
             <view class="weui-label">专业</view>
           </view>
           <view class="weui-cell__bd">
-            <input class="weui-input" name="major" type="text" placeholder="请输入专业" />
+            <input class="weui-input" confirm-type="next" name="major" type="text" placeholder="请输入专业" />
           </view>
         </view>
 
@@ -52,7 +54,7 @@
             <view class="weui-label">班级</view>
           </view>
           <view class="weui-cell__bd">
-            <input class="weui-input" name="class" type="number" placeholder="请输入班级" />
+            <input class="weui-input" confirm-type="next" name="class" type="number" placeholder="请输入班级" />
           </view>
         </view>
 
@@ -61,7 +63,7 @@
             <view class="weui-label">楼栋</view>
           </view>
           <view class="weui-cell__bd">
-            <input class="weui-input" name="dormitory" type="number" placeholder="请输入楼栋" />
+            <input class="weui-input" confirm-type="next" name="dormitory" type="number" placeholder="请输入楼栋" />
           </view>
         </view>
 
@@ -70,7 +72,7 @@
             <view class="weui-label">寝室号</view>
           </view>
           <view class="weui-cell__bd">
-            <input class="weui-input" name="room" type="number" placeholder="请输入寝室号" />
+            <input class="weui-input" confirm-type="next" name="room" type="number" placeholder="请输入寝室号" />
           </view>
         </view>
 
@@ -81,7 +83,7 @@
             <view class="weui-label">qq</view>
           </view>
           <view class="weui-cell__bd">
-            <input class="weui-input" name="qqnumber" type="text" placeholder="请输入qq" />
+            <input class="weui-input" confirm-type="next" name="qqnumber" type="text" placeholder="请输入qq" />
           </view>
         </view>
 
@@ -91,11 +93,9 @@
             <view class="weui-label">手机号</view>
           </view>
           <view class="weui-cell__bd">
-            <input class="weui-input" name="phonenumber" type="number" placeholder="请输入手机号" />
+            <input class="weui-input" confirm-type="done" name="phonenumber" type="number" placeholder="请输入手机号" />
           </view>
-          <view class="weui-cell__ft">
-            <view class="weui-vcode-btn">获取验证码</view>
-          </view>
+
         </view>
       </view>
 

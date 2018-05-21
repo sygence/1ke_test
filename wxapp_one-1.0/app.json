@@ -1,14 +1,23 @@
 {
   "pages": [
-     "pages/home/index",
+    
+    "pages/home/index",
+    "pages/kebiao/AddLsn",
+    "pages/kebiao/GetLsn",
+    "pages/kebiao/kebiao",
+    "pages/index/index",
+    "pages/detail/detail",
     "pages/user/index",
+    "pages/communication/communication",
     "pages/repair/repair",
     "pages/user/login",
-    
     "pages/list/index",
     "pages/article/index",
     "pages/page/index",
     "pages/feedback/feedback",
+    "pages/faceset/faceset",
+    "pages/faceset-search/faceset-search",
+    "pages/faceset-add/faceset-add",
     "pages/user/bind",
     "pages/form/form",
     "pages/search/index"

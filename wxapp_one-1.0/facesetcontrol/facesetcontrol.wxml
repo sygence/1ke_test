@@ -1,0 +1,21 @@
+<!-- facesetadd template -->
+
+
+
+
+<!-- facesetsearch template -->
+<template name="facesetsearch">
+  <view class="scanner" bindtap="bindChooseImg">
+    <canvas class="canvas" id="scannerCanvas" canvas-id="scannerCanvas" disable-scroll="true" />
+    <view class="chooseImage">
+      <view class="image-plus image-plus-nb">
+        <view class="image-plus-horizontal"></view>
+        <view class="image-plus-vertical"></view>
+      </view>
+      <view class="image-plus-text">点击拍摄</view>
+    </view>
+  </view>
+  <view class="buttons">
+    <view class="confirm" bindtap="bindConfirm">确定</view>
+  </view>
+</template>

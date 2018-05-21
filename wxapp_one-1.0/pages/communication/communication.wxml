@@ -1,0 +1,28 @@
+
+<view class="contain" wx:for="{{contactsList}}">
+      <view class="call">
+        <view class="call-q">
+            <view class="call-hd">
+              <image src="/../images/account.png" style="width:32rpx;height:32rpx;"></image>
+              <text>联系人</text> 
+            </view>
+            <view class="call-bd">
+              <text>{{item.name}}</text>
+            </view>
+        </view>
+      </view>
+
+
+    <view class="call">
+      <view class="call-q">
+          <view class="call-hd">
+            <image src="/../images/phone.png" style="width:32rpx;height:32rpx;"></image>
+            <text>手机号</text> 
+          </view>
+          <view class="call-bd" bindtap="phoneCall" data-phone="{{item.phoneNumber}}">
+            <text>{{item.phoneNumber}}</text>
+          </view>
+      </view>
+    </view>
+    
+</view>

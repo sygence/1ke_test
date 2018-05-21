@@ -1,3 +1,4 @@
+var that = this
 Page({
 
   /**
@@ -5,7 +6,19 @@ Page({
    */
   data: {
     content: '',
-    contact: ''
+    contact: '',
+    dormitory:'',
+    room:''
+  },
+  contentImput(e) {
+    this.setData({
+      dormitory: e.detail.value
+    })
+  },
+  contentImput(e) {
+    this.setData({
+      room: e.detail.value
+    })
   },
   contactImput(e) {
     this.setData({
@@ -24,13 +37,13 @@ Page({
         key: 'account',
         success: function (res) {
           wx.request({
-            //url: '', 
-            method: 'post',
+            url: 'https://ehome.susmote.com/zb_system/cmd.php?act=os_wxapi&v=v1&mode=repair', 
+            method: 'POST',
             data: {
               content: that.data.content,
               contact: that.data.contact,
-              name: res.data.name,
-              category: '1'
+              dormitory: that.data.dormitory,
+              room: that.data.room,
             },
             header: {
               'content-type': 'application/x-www-form-urlencoded' // 默认值

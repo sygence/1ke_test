@@ -40,7 +40,7 @@ Page({
         if (home_cache && home_cache_times && (new Date).getTime() - home_cache_times < 2 * 60 * 60 * 1000) {
             this.setData(home_cache)
         } else {
-            this.loadData()
+             this.loadData()
         }
     },
     /**
@@ -64,6 +64,8 @@ Page({
      * 加载数据
      */
     loadData(page = 1, cb) {
+      console.log(app);
+      console.log(app.libs)
         if (this.data.loading) return this
         this.setData({
             loading: true,

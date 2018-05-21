@@ -1,0 +1,68 @@
+<view class="NavBar" style="height:{{NavBarHeight}}px;background: {{StyleColor}};"></view>
+<view class="PageCont" style="padding-top:{{NavBarHeight}}px;">
+    <image bindlongtap="DIYbg" class="KebiaoBg" mode="aspectFill" src="{{KebiaoBg}}" style="padding-top:{{NavBarHeight}}px;"></image>
+    <view class="wrapper">
+        <view class="og-calendar">
+            <view class="TitleBar">
+                <view bindtap="OnAddLsn" class="left_edit">设置</view>
+                <view class="title">
+                    <picker bindchange="NowWeekChange" mode="selector" range="{{weeks}}" value="{{now_week-1}}">
+            {{thisweekmonth}}第{{now_week}}周 <text class="fa fa-angle-down"></text>
+                    </picker>
+                </view>
+            </view>
+            <view class="box">
+                <view class="day">
+                    <view class="day_class" style="height: {{(item.end-item.start+1)*88}}rpx">1</view>
+                    
+                    <view class="day_class" style="height: {{(item.end-item.start+1)*88}}rpx">2</view>
+                    <view class="day_time"></view>
+                    <view class="day_class" style="height: {{(item.end-item.start+1)*88}}rpx">3</view>
+                    
+                    <view class="day_class" style="height: {{(item.end-item.start+1)*88}}rpx">4</view>
+                    <view class="day_time"></view>
+                    <view class="day_class" style="height: {{(item.end-item.start+1)*88}}rpx">5</view>
+                    
+                    <view class="day_class" style="height: {{(item.end-item.start+1)*88}}rpx">6</view>
+                    <view class="day_time"></view>
+                    <view class="day_class" style="height: {{(item.end-item.start+1)*88}}rpx">7</view>
+                    
+                    <view class="day_class" style="height: {{(item.end-item.start+1)*88}}rpx">8</view>
+                    <view class="day_time"></view>
+                    <view class="day_class" style="height: {{(item.end-item.start+1)*88}}rpx">9</view>
+                    
+                    <view class="day_class" style="height: {{(item.end-item.start+1)*88}}rpx">10</view>
+                    <view class="day_time"></view>
+                    <view class="day_class" style="height: {{(item.end-item.start+1)*88}}rpx">11</view>
+                    
+                    <view class="day_class" style="height: {{(item.end-item.start+1)*88}}rpx">12</view>
+                    
+                </view>
+                <view>
+                    <view class="row">
+                        <view class="item" style="{{item==now_day?'font-weight:bold;font-size:28rpx;color:'+StyleColor+';':''}}" wx:for="{{days}}">{{item}}</view>
+                    </view>
+                    <view class="row_date" style="border-bottom-color: {{StyleColor}};">
+                        <view class="item" wx:for="{{thisweekdates}}">{{item}}日</view>
+                    </view>
+                    <view class="week">
+                        <view bindtap="ViewClass" class="class inner ripple flipInX" data-data="{{item}}" style="left: {{(item.day-1)*97+3}}rpx;top: {{(item.start-1)*100+3}}rpx;height: {{(item.end-item.start+1)*80}}rpx;background:{{StyleColor}};z-index:99;" wx:for="{{now_week_class}}">
+                            <view class="text">{{item.title}}
+                  <text class="fa fa-map-marker"></text> {{item.classroom}}</view>
+                        </view>
+                        <view bindtap="ViewClass" class="class inner ripple flipInX" data-data="{{item}}" style="left: {{(item.day-1)*97+3}}rpx;top: {{(item.start-1)*100+3}}rpx;height: {{(item.end-item.start+1)*80}}rpx;background:#BFBFBF;z-index:1;" wx:for="{{other_week_class}}">
+                            <view class="text">{{item.title}}
+                  <text class="fa fa-map-marker"></text> {{item.classroom}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view bindtap="CloseMessageBox" class="MessageBox inner ripple bounceInUp" wx:if="{{ShowMessageBox}}">
+    {{MessageText}}
+    <view class="CloseButton">
+            <text ariaHidden="true" class="fa fa-times"></text>
+        </view>
+    </view>
+</view>

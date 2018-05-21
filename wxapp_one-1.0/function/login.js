@@ -84,6 +84,7 @@ class Login {
     /**
      * 获取用户的微信个人信息
      */
+    /** 
     getWXUserInfo() {
         return new Promise((resolve, reject) => {
             wx.getUserInfo({
@@ -101,7 +102,7 @@ class Login {
             })
         })
     }
-
+    */
     /**
      * 调用微信的登录
      */

@@ -1,0 +1,45 @@
+<view class="PageCont PageWithTitle" style="padding-top:{{NavBarHeight}}px;">
+    <form bindsubmit="GetStuScore">
+        <view class="form-list">
+            <view class="form-item">
+                <view class="form-item-hd">来源</view>
+                <view class="form-item-bd">
+                    <input disabled type="text" value="正方教务管理系统"></input>
+                </view>
+            </view>
+            <view class="form-item">
+                <view class="form-item-hd">学期</view>
+                <view class="form-item-bd">
+                    <picker bindchange="PickerChange" mode="multiSelector" range="{{Array}}" value="{{Index}}">
+          {{Array[0][Index[0]]}} {{Array[1][Index[1]]}}
+        </picker>
+                </view>
+            </view>
+        </view>
+        <view class="form-list">
+            <view class="form-item">
+                <view class="form-item-hd">学号</view>
+                <view class="form-item-bd">
+                    <input name="id" placeholder="请输入学号" type="number" value="{{StuInfo.id}}"></input>
+                </view>
+            </view>
+            <view class="form-item">
+                <view class="form-item-hd">密码</view>
+                <view class="form-item-bd">
+                    <input name="pwd" password="true" placeholder="请输入教务系统密码" type="text" value="{{StuInfo.jwpwd}}"></input>
+                </view>
+            </view>
+        </view>
+        <view class="form-list">
+            <view class="form-item">
+                <view class="form-item-hd">验证码</view>
+                <view class="form-item-bd">
+                    <input name="xdvfb" placeholder="请输入验证码" type="text"></input>
+                </view>
+                <image bindtap="ChangeCode" class="form-item-sd" src="http://api.xf5z.net/whu/code/{{fileid}}.jpg"></image>
+            </view>
+        </view>
+        <input hidden="true" name="cookies" type="text" value="{{fileid}}"></input>
+        <button formType="submit" style="background: {{StyleColor}};">导 入</button>
+    </form>
+</view>

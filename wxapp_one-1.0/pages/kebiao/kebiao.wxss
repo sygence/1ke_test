@@ -1,0 +1,175 @@
+
+.og-calendar .box {
+    margin-top: 90rpx;
+    display: flex;
+    border: 1px solid #515151;
+}
+
+.og-calendar .week {
+    width: 665rpx;
+    position: relative;
+    
+}
+
+.og-calendar .day {
+    width: 81rpx;
+    text-align: center;
+    font-size: 32rpx;
+    margin-top: 80rpx;
+     border: 1px solid #515151;
+}
+
+.og-calendar .day_class {
+    padding-top: 28rpx;
+    line-height: 35rpx;
+    height: 55rpx;
+    font-size: 32rpx;
+    text-shadow: 0 0 15rpx #f4f4f4,-0 -0 15rpx #f4f4f4;
+    background-color:gainsboro;
+
+}
+
+.og-calendar .day_time {
+    margin-bottom: 22rpx;
+    
+    line-height: 15rpx;
+    font-size: 20rpx;
+    color: #999;
+}
+
+.og-calendar .row {
+    width: 679rpx;
+    display: flex;
+    text-shadow: 0 0 15rpx #f4f4f4,-0 -0 15rpx #f4f4f4;
+    
+    background-color:gainsboro;
+}
+
+.og-calendar .row .item {
+    width: 97rpx;
+    line-height: 35rpx;
+    height: 35rpx;
+    font-size: 26rpx;
+    text-align: center;
+}
+
+.og-calendar .row_date {
+    width: 679rpx;
+    display: flex;
+    padding-bottom: 5rpx;
+    background-color:gainsboro;
+    
+}
+
+.og-calendar .row_date .item {
+    line-height: 30rpx;
+    height: 30rpx;
+    width: 97rpx;
+    font-size: 20rpx;
+    color: #999;
+    text-align: center;
+}
+
+.og-calendar .class {
+    position: absolute;
+    width: 91rpx;
+    background-color: #194982;
+    border-radius: 10rpx;
+     border: 1px solid #515151;
+}
+
+.og-calendar .class .text {
+    padding: 8rpx;
+    width: 75rpx;
+    word-break: break-all;
+    font-size: 24rpx;
+    color: #fff;
+    line-height: 30rpx;
+    
+   
+}
+
+.MessageBox {
+    width: 550rpx;
+    background: #fff;
+    position: fixed;
+    bottom: 50rpx;
+    left: 80rpx;
+    border-radius: 20rpx;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    padding: 20rpx;
+    font-size: 28rpx;
+    z-index: 999;
+    color: #515151;
+    text-align: center;
+     border: 1px solid #515151;
+}
+
+.MessageBox .CloseButton {
+    position: absolute;
+    top: -20rpx;
+    right: -20rpx;
+    width: 50rpx;
+    height: 50rpx;
+    border-radius: 25rpx;
+    color: #fff;
+    line-height: 45rpx;
+    font-size: 40rpx;
+    text-align: center;
+    background: #515151;
+     border: 1px solid #515151;
+}
+
+.KebiaoBg {
+    position: absolute;
+    z-index: -1;
+    top: 80rpx;
+    width: 100%;
+    right: 0;
+    opacity: 0.7;
+}
+.TitleBar {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 80rpx;
+    text-align: left;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    line-height: 80rpx;
+    color: black;
+    border: 1px solid black;
+
+}
+
+.TitleBar .title {
+    width: 450rpx;
+    text-align: center;
+    font-size: 36rpx;
+    font-weight: bold;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.TitleBar .left_edit {
+    padding-left: 30rpx;
+    width: 120rpx;
+    font-size: 32rpx;
+}
+
+.return-btn {
+    position: fixed;
+    z-index: 999;
+    top: 15rpx;
+    left: 7pt;
+    padding: 10rpx 20rpx;
+    display: table;
+    line-height: 40rpx;
+    border-radius: 30rpx;
+    font-size: 30rpx;
+    background: rgba(0,0,0,0.2);
+    color: #fff;
+}
